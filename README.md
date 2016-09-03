@@ -18,4 +18,4 @@
 ■ Common step after login to vm builded for executing serverspec  
 1. 
 
-
+aaa
