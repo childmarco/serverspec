@@ -1,0 +1,62 @@
+10.33.19.36:
+  os:
+    directory: directory.csv
+#    user_and_group: sample.yml
+
+192.168.56.150:
+  os:
+    directory: directory.csv
+#  mv:
+#    oracle: oracle.yml
+#    apache: apache.yml
+
+
+
+#  192.168.56.150:
+#    :mv:
+#      :apache:
+#        - apache_config1.yml
+#      :oracle:
+#        - oracle.yml
+#    :os:
+#      :directory:
+#        - hogehoge.yml
+#      :cron:
+#        - cron.yml
+#      :kernel:
+#        - hogehoge.yml
+#
+#
+#  192.168.56.200:
+#    :mv:
+#      :apache:
+#        - hogehoge.yml
+#      :ngix:
+#        - hogehoge.yml
+#      :oracle:
+#        - hogehoge.yml
+#    :os:
+#      :directory:
+#        - hogehoge.yml
+
+
+
+#  192.168.56.200:
+#    :test_scope:
+#      :mv:
+#        :apache:
+#          - hogehoge.yml
+#        :oracle:
+#          - hogehoge.yml
+#      :os:
+#        :directory:
+#          - hogehoge.yml
+
+
+
+
+#mkdir -p /tmp/infra/test/serverspec
+#mkdir -p /tmp/infra/test/serverspec/orange
+#mkdir -p /tmp/infra/test/serverspec/apple
+#mkdir -p /tmp/infra/test/vagrant
+#mkdir -p /tmp/infra/build

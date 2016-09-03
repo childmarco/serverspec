@@ -1,0 +1,90 @@
+
+sudo yum -y update
+sudo yum install -y git vim
+
+#export PATH="$HOME/.rbenv/bin:$PATH"
+#eval "$(rbenv init -)"
+
+git clone git://github.com/sstephenson/rbenv.git ~/.rbenv
+echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
+echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
+exec $SHELL -l
+
+git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+
+rbenv --version
+
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+■下記手順はインストール後RubyMineが使用できない。rubyのパスがダメらしい。
+yum -y update
+yum install git
+
+git clone git://github.com/sstephenson/rbenv.git /usr/local/src/rbenv
+
+echo 'export RBENV_ROOT="/usr/local/src/rbenv"' >> /etc/profile.d/rbenv.sh
+echo 'export PATH="${RBENV_ROOT}/bin:${PATH}"' >> /etc/profile.d/rbenv.sh
+echo 'eval "$(rbenv init -)"' >> /etc/profile.d/rbenv.sh
+source /etc/profile.d/rbenv.sh
+git clone git://github.com/sstephenson/ruby-build.git /usr/local/src/rbenv/plugins/ruby-build
+
+■下記手順はインストール後RubyMineが使用できない。rubyのパスがダメらしい。
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+
+sudo yum install -y gcc gcc-c++ openssl-devel readline-devel　zlib-devel libcurl-devel libffi-devel
+sudo yum install -y readline-devel
+
+rbenv install --list
+rbenv install 2.3.0
+rbenv global 2.3.0
+
+gem -v
+gem update --system
+gem -v
+gem install bundler
+
+echo 'export PATH="$PATH":/vagrant/serverspec/vendor/bundler/ruby/2.3.0/gems/
+rbenv exec gem list
+bundle exec rake spec
+bundle exec serverspec-init
+
+rbenv which ruby
+
+git@github.com:childmarco/serverspec.git
+
+
+ssh-keygen -t rsa -b 4096 -C "chikashi.ni.ym@gmail.com"
+
+
+■必要なライブラリがインストールされてないと、rubyインストール時にエラーが発生する。)(yum installにて対処)
+BUILD FAILED (CentOS release 6.8 (Final) using ruby-build 20160602-5-g3f6d068)
+
+Inspect or clean up the working tree at /tmp/ruby-build.20160613055431.10229
+Results logged to /tmp/ruby-build.20160613055431.10229.log
+
+Last 10 log lines:
+The Ruby openssl extension was not compiled.
+The Ruby readline extension was not compiled.
+The Ruby zlib extension was not compiled.
+ERROR: Ruby install aborted due to missing extensions
+Try running `yum install -y openssl-devel readline-devel zlib-devel` to fetch missing dependencies.
+
+Configure options used:
+  --prefix=/usr/local/src/rbenv/versions/2.3.0
+  LDFLAGS=-L/usr/local/src/rbenv/versions/2.3.0/lib
+  CPPFLAGS=-I/usr/local/src/rbenv/versions/2.3.0/include
+[root@vagrant-centos65 vagrant]#
+[root@vagrant-centos65 vagrant]#
+
+
+■適切なgemファイルを見ていていない(bundle exec xxにて対処)
+[root@vagrant-centos65 serverspec]# rake --trace
+rake aborted!
+LoadError: cannot load such file -- rspec/core/rake_task
+
+[root@vagrant-centos65 serverspec]# bundle exec gem which rake
+/vagrant/serverspec/vendor/bundler/ruby/2.3.0/gems/rake-10.1.0/lib/rake.rb
+[root@vagrant-centos65 serverspec]#
+[root@vagrant-centos65 serverspec]# gem which rake
+/usr/local/src/rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rake-10.4.2/lib/rake.rb
+[root@vagrant-centos65 serverspec]#ruby 2.3.0p0 (2015-12-25 revision 53290) [x86_64-linux]
+Bundler version 1.12.5

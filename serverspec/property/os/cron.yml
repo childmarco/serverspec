@@ -1,0 +1,6 @@
+crontab:
+  vagrant:
+    - '*/1 * * * * /home/vagrant/apple.sh'
+    - '755'
+  vagrant2:
+    - '755'

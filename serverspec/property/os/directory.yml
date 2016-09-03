@@ -1,0 +1,36 @@
+# example
+# hostname {
+#    directory_path,permission,owner,group,
+# }
+
+
+#localhost = [
+#  '/Users/niiyama/infra_test' => {'niiyama', 'staff', '755'}
+#  '/Users/niiyama/infra_test/serverspec' => {'niiyama', 'staff', '755'}
+#]
+#rmsdb21t = [
+#  '/Users/niiyama/infra_test' => {'niiyama', 'staff', '755'}
+#  '/Users/niiyama/infra_test/serverspec' => {'niiyama', 'staff', '755'}
+#]
+
+
+#yamlの場合の表記の仕方
+localhost:
+  - directory: "/Users/niiyama/infra_test"
+    permission: "755"
+  - directory: "/Users/niiyama/infra_test/serverspec"
+    permission: "755"
+#call side
+#directories = YAML.load_file(File.join(__dir__,'../../../property/os/directory.yml'))
+#
+#p directories
+#p directories['localhost']
+#
+#directories['localhost'].each do |dir|
+#  dir.each do |hoge|
+#    p hoge
+#  end
+#end
+
+
+

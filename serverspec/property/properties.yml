@@ -1,0 +1,11 @@
+xxx.xxx.xxx.xxx
+  os:
+    directory: directory.csv
+#    user_and_group: sample.yml
+
+192.168.56.150:
+  os:
+    directory: directory.csv
+#  mv:
+#    oracle: oracle.yml
+#    apache: apache.yml

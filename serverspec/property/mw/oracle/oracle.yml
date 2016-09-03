@@ -1,0 +1,11 @@
+init_parameter:
+  aaaa: aa
+  bbbb: bb
+  cccc: cc
+  dddd: dd
+  eeee: ee
+  ffff: ff
+
+tablespaces:
+  directory:
+  permission:

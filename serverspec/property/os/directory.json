@@ -1,0 +1,37 @@
+{
+  "localhost": [
+    {
+      "directory": "/Users/niiyama/infra_test",
+      "owner": "niiyama",
+      "group": "staff",
+      "permission": "755"
+    },
+    {
+      "directory": "/Users/niiyama/infra_test/serverspec",
+      "owner": "niiyama",
+      "group": "staff",
+      "permission": "755"
+    },
+    {
+      "directory": "/opt/infra/serverspec",
+      "owner": "root",
+      "group": "root",
+      "permission": "755"
+    },
+    {
+      "directory": "/opt/infra/serverspec/apple",
+      "owner": "root",
+      "group": "root",
+      "permission": "755"
+    },
+    {
+      "directory": "/opt/infra/serverspec/orange",
+      "owner": "root",
+      "group": "root",
+      "permission": "777"
+    }
+  ]
+}
+
+
+

@@ -1,0 +1,2 @@
+user,setting
+vagrant,"*/1 * * * * /home/vagrant/apple.sh"

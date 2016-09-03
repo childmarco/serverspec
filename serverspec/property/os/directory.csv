@@ -1,0 +1,7 @@
+path,owner,group,permission
+/opt,root,755
+/opt/pros,ondusr,775
+/opt/pros/ond,ondusr,740
+/opt/pros/ond/bin,ondusr,775
+/opt/pros/ond/config,ondusr,775
+

@@ -1,0 +1,22 @@
+#  192.168.56.150:
+#    :test_scope:
+#      :mv:
+#        :apache:
+#          -hogehoge.yml
+#        :oracle:
+#          -hogehoge.yml
+#      :os:
+#        :directory:
+#          -hogehoge.yml
+#
+#
+#  192.168.56.200:
+#    :test_scope:
+#      :mv:
+#        :apache:
+#          -hogehoge.yml
+#        :oracle:
+#          -hogehoge.yml
+#      :os:
+#        :directory:
+#          -hogehoge.yml
