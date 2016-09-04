@@ -15,7 +15,6 @@ options[:user] = ask("Enter login user:")
 options[:password] = ask("Enter login password:")
 
 if options[:password].empty? || options[:user].empty?
-	# raise "Plase confirm the login user/password"
 	p "Plase confirm the login user/password"
 	exit();
 else

@@ -1,11 +1,12 @@
-xxx.xxx.xxx.xxx
+192.168.56.160:
   os:
     directory: directory.csv
-#    user_and_group: sample.yml
+    directory: directory1.csv
 
 192.168.56.150:
   os:
     directory: directory.csv
+    user: directory1.csv
 #  mv:
 #    oracle: oracle.yml
 #    apache: apache.yml
