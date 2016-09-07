@@ -1,15 +1,11 @@
-require 'spec_helper'
+require_relative '../spec_helper'
+require_relative '../../helpers/previous_helper'
 require 'yaml'
 require 'json'
 require 'csv'
 
-# require_relative '../../helpers/directory_helper'
-# include DirectoryHelper
-
-require_relative '../../helpers/previous_helper'
-include PreviousHelper
-
-csv_config_file = get_csv_config(ENV['TARGET_HOST'])
+get_config_file = PreviousHelper.new
+csv_config_file = get_config_file.get_csv_config(ENV['TARGET_HOST'])
 
 describe "Check Directory" do
   csv_config_file.each do |row|
